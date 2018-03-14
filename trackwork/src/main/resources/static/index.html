@@ -1,0 +1,43 @@
+<html ng-app="Module">
+<head>
+<title>testing for track your work api.</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src ="js/main.js"></script>
+</head>
+
+<body ng-controller = "MainController">
+
+<form ng-submit="create()">
+{{error}}
+<table>
+<tr>
+<td>firstname:</td>
+<td><input type="text" ng-model="user.fname"></td>
+</tr>
+<tr>
+<td>lastname :</td>
+<td><input type="text" ng-model="user.lname"></td>
+</tr>
+<tr>
+<td>username :</td>
+<td><input type="text" required="" ng-model="user.username">
+</tr>
+<tr>
+<td>password :</td>
+<td><input type="password" required="" ng-model="user.password"></td>
+</tr>
+<tr>
+<td>email-id :</td>
+<td><input type="email" ng-model="user.mailid"></td>
+</tr>
+<tr>
+<td></td>
+<td><input type="submit" value="signup"></td>
+</tr>
+</table>
+</form>
+
+<div ng-include="html/records.html"></div>
+
+</body>
+</html>

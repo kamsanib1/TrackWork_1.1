@@ -1,0 +1,49 @@
+<div>
+
+<form ng-submit="createRecord()">
+<table>
+
+
+<tr>
+<td>Username :</td>
+<td><input type="text" ng-model="record.user"></td>
+</tr>
+
+<tr>
+<td>Query :</td>
+<td><input type="text" required="" ng-model="record.query"></td>
+</tr>
+<tr>
+<td>Topic :</td>
+<td><input type="text" ng-model="record.topic"></td>
+</tr>
+<tr>
+<td>Solution :</td>
+<td><input type="text" ng-model="solution">
+</tr>
+<tr>
+<td>Type :</td>
+<td><input type="number" ng-model="record.type"></td>
+</tr>
+<tr>
+<td>Status :</td>
+<td><input type="number" ng-model="record.status"></td>
+</tr>
+<tr>
+<td>Priority :</td>
+<td><input type="number" ng-model="record.priority"></td>
+</tr>
+<tr>
+<td>Tag :</td>
+<td><input type="text" ng-model="tags">
+</tr>
+
+<tr>
+<td></td>
+<td><input type="submit" value="create record"></td>
+</tr>
+</table>
+</form>
+
+
+</div>

@@ -1,0 +1,22 @@
+Work Track:
+
+12/11/2017
+*Solved the content-type bug regarding POST.
+	-source of the problem is JSON managed and back references. Problem with deserializaation of JSON to Entity POJO's.
+	-solved by eliminating references and nullifying back reference values in services to avoid infinite JSON serialize loop.
+
+ *Used postman for api testing instead of angular forms.
+ 
+ # Rest endpoints 
+ # Angular UI data requirements.
+ 
+ 12/12/2017
+ *Created rest end points for CRUD operations on Users, Records, Tags and Solutions.
+ *finished solutions api.
+ *finished users api.
+ *finished aggregate testing on USERS api.
+ 
+ 12/13/2017
+ *finished aggregate testing on SOLUTIONS api.
+ *finished and aggregate testing TAGS api.
+ *finished and tested RECORDS api;

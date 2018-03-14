@@ -34,15 +34,13 @@ public class Records {
 
 	@ManyToOne
 	@JoinColumn
-	@JsonBackReference(value="records")
 	private Users user;
 
 	@OneToMany(mappedBy="record")
-	@JsonManagedReference(value="solutions")
 	private Collection<Solutions> solutions = new ArrayList<Solutions>();
 	
-	@ManyToMany(mappedBy="id")
-	@JoinTable(name = "RECORD_TAGS", joinColumns= {@JoinColumn(name="id")}, inverseJoinColumns= {@JoinColumn(name="id")})
+	@ManyToMany
+	@JoinTable(name = "RECORD_TAGS", joinColumns= {@JoinColumn(name="record_id")}, inverseJoinColumns= {@JoinColumn(name="tag_id")})
 	private Collection<Tags> tags = new ArrayList<Tags>();
 	
 	public int getId() {

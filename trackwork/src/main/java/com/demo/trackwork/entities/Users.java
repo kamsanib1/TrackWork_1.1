@@ -17,11 +17,19 @@ public class Users {
 	private String fname;
 	private String lname;
 	private String mailid;
-
+	
 	@OneToMany(mappedBy="user")
-	@JsonBackReference(value="users")
 	private Collection<Records> records = new ArrayList<Records>(); 
 	
+	@OneToMany(mappedBy="username")
+	private Collection<Tags> tags = new ArrayList<Tags>();
+
+	public Collection<Tags> getTags() {
+		return tags;
+	}
+	public void setTags(Collection<Tags> tags) {
+		this.tags = tags;
+	}
 	public String getUsername() {
 		return username;
 	}
