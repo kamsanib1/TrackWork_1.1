@@ -7,6 +7,12 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 public class Tags {
@@ -16,6 +22,19 @@ public class Tags {
 	private int id;
 	private String name;
 	
+	@ManyToOne
+	@JoinColumn
+	private Users username;
+	
+	@ManyToMany(mappedBy="tags")
+	private Collection<Records> records = new ArrayList<Records>();
+	
+	public Collection<Records> getRecords() {
+		return records;
+	}
+	public void setRecords(Collection<Records> records) {
+		this.records = records;
+	}
 	public int getId() {
 		return id;
 	}
@@ -28,4 +47,11 @@ public class Tags {
 	public void setName(String name) {
 		this.name = name;
 	}
+	public Users getUsername() {
+		return username;
+	}
+	public void setUsername(Users username) {
+		this.username = username;
+	}
+
 }

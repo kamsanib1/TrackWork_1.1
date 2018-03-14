@@ -24,7 +24,6 @@ public class Solutions {
 	
 	@ManyToOne
 	@JoinColumn
-	@JsonBackReference(value="solutions")
 	private Records record;
 
 	public int getId() {
